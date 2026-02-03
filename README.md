@@ -68,58 +68,6 @@ The system includes a complete workflow starting from raw data ingestion to auto
 
 ---
 
-## Project Structure
-
-churn_prediction_project/
-│
-├── data/
-│ ├── raw/
-│ ├── interim/
-│ └── processed/
-│
-├── notebooks/
-│ ├── 01_cleaning_eda.ipynb
-│ ├── 02_feature_engineering.ipynb
-│ ├── 03_ml_training.ipynb
-│ └── 04_dl_training.ipynb
-│
-├── src/
-│ ├── split_tables.py
-│ ├── export_ml_dataset.py
-│ ├── train_ml.py
-│ ├── train_dl.py
-│ ├── predict.py
-│ └── utils.py
-│
-├── models/
-│ ├── model_xgb.pkl
-│ └── model_nn.h5
-│
-├── deployment/
-│ ├── fastapi_app.py
-│ ├── streamlit_app.py
-│ ├── Dockerfile.fastapi
-│ ├── Dockerfile.streamlit
-│ ├── docker-compose.yml
-│ └── requirements.txt
-│
-├── mlflow/
-│ ├── mlruns/
-│ └── mlflow_server.py
-│
-├── airflow/
-│ └── churn_dag.py
-│
-├── dashboard/
-│ ├── churn_dashboard.pbix
-│ └── exports/
-│
-└── README.md
-
-
-
----
-
 ## How It Works
 
 ### 1. Data Engineering Pipeline
