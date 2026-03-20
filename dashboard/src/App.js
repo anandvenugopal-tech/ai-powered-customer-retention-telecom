@@ -85,11 +85,13 @@ function App() {
     setCustomer(null);
     setPrediction(null);
 
+    const API_BASE = 'https://churn-backend-yryd.onrender.com'
+
     try {
       // Expected response shape (flexible):
       // { customer: {...}, prediction: { label, probability } }
       // OR { ...customerFields, prediction: {...} }
-      const res = await fetch(`http://127.0.0.1:8000/customer/${id}`);
+      const res = await fetch(`${API_BASE}/customer/${id}`);
 
       if (!res.ok) {
         const text = await res.text().catch(() => '');
@@ -108,7 +110,7 @@ function App() {
       delete inputData.churn;
 
       try {
-        const predictRes = await fetch('http://127.0.0.1:8000/predict', {
+        const predictRes = await fetch(`${API_BASE}/predict`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(inputData),
