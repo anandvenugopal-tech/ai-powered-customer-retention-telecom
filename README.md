@@ -8,8 +8,8 @@ The system includes a complete workflow starting from raw data ingestion to auto
 ---
 
 ## Live Link
-https://churn-backend-yryd.onrender.com
-https://moonlit-moonbeam-3c3ce5.netlify.app/
+- https://churn-backend-yryd.onrender.com
+- https://moonlit-moonbeam-3c3ce5.netlify.app/
 
 
 ## Key Features
